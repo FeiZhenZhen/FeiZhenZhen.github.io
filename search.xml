@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[个人学习记录2]]></title>
+    <url>%2F2019%2F06%2F21%2F%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952%2F</url>
+    <content type="text"><![CDATA[学习了Object类中的比较常用方法： 一、toString()123public String toString()｛ return getClass().getName() + &apos;@&apos; + Integer.toHexString(hashCode())｝ 其实它返回的是它的类名加@加此对象的无符号十六进制哈希码值 本身返回的值是没有意义的。关键是用来重写此方法用来输出有意义的信息。 二、equals()123public boolean equals(Object obj) &#123; return (this == obj); &#125; 他默认功能是比较引用数据的地址值是否相同。 但我们可以重写他本来的功能。 三、其他了解的方法：​ 如hashCode()方法。他返回的是一个对象的哈希值。并不是实际地址值。但可以理解成地址值 ​ 和Clone()方法。它是克隆一个对象。包括成员变量的数据复制。但是它和2个引用指向同一个对象是有区别的。他不能随着它克隆的对象改变内容而改变内容。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[个人学习记录]]></title>
+    <url>%2F2019%2F06%2F20%2F%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%9A%84%E5%BD%A2%E5%8F%82%E5%92%8C%E8%BF%94%E5%9B%9E%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[引用数据（类，接口等）的形参和返回值 形参：​ 形参如果是一个类的时候就需要该类的对象； ​ 形参如果是一个抽象类的时候就需要该类的子类对象； ​ 形参如果是接口的时候就需要该接口的实现类对象； 返回值：​ 返回值如果是一个类的时候返回的是这个类的对象； ​ 返回值如果是一个抽象类的时候返回的是这个抽象类的子类对象； ​ 返回值如果是一个接口的时候返回的是这个接口的实现类对象； 链式编程：​ 对象.方法1().方法2()….方法n(); ​ 这种用法：其实是在方法1()调用完毕后，应该返回一个对象;方法2()调用完毕后，也应该返回一个对象；方法n调用完毕后，可能是对象，也可以不是对象。 内部类:​ 分类：成员内部类和局部内部类 ​ 内部类访问规则：内部类可以直接访问外部类，但外部类访问内部类要创建对象 成员内部类：​ 有2个关键字：private是为了数据的安全性； ​ static是为了访问的方便性; ​ 成员内部类不是静态的时候： ​ 外部类名.内部类名 对象名 = new 外部类名().new 内部类名(); ​ 成员内部类是静态的： ​ 外部类名.内部类名 对象名 = new 外部类名.内部类名(); 局部内部类：​ 局部内部类访问局部变量必须加final修饰，（java8之后不加系统会自动加上）； ​ 为什么呢？因为局部变量是使用完毕就消失。而堆内存的数据不会消失，而堆内存使用该变量，但该变量却没有了，为了让该值存在。就加final修饰。 匿名内部类：​ 是局部内部类的简化格式；前提是存在一个类或接口 ​ 格式是： ​ new 类名或接口名(){ ​ 重写方法； } ​ 本质是继承该类或者实现接口类的子类匿名对象。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello world]]></title>
+    <url>%2F2019%2F06%2F19%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick Start+Create a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
